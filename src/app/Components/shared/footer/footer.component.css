@@ -1,0 +1,39 @@
+div{
+    background-color: rgb(0, 0, 0);
+    height: 150px;
+}
+p{
+    color: aliceblue;
+}
+.piePaginaTitulo{
+	position: relative;
+    font-size: 20px;
+    top: 10px;
+    left: 10%;
+}
+.piePaginaDireccion{
+	position: relative;
+    top: 10px;
+    left: 10%;
+}
+.piePaginaNumero{
+	position: relative;
+    top: 10px;
+    left: 10%;
+}
+
+.piePaginaEnlace1{
+	position: relative;
+    top: -120px;
+    left: 80%;
+}
+.piePaginaEnlace2{
+	position: relative;
+    top: -120px;
+    left: 80%;
+}
+.piePaginaEnlace3{
+	position: relative;
+    top: -120px;
+    left: 80%;
+}

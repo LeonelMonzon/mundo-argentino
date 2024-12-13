@@ -1,0 +1,20 @@
+
+<div class="tabla">
+    <h1 class="title-center">Historial de compras:</h1>
+    <table class="highlight-table">
+        <thead>
+          <tr>
+            <th>Productos</th>
+            <th>Metodo de Pago</th>
+            <th>Total pagado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cart of carts"> 
+            <td>{{ getProductNames(cart.products) }}</td> 
+            <td>{{ cart.paymentMethod }}</td> 
+            <td>{{ cart.total }}</td> 
+          </tr>
+        </tbody>
+    </table>    
+</div>

@@ -1,0 +1,52 @@
+.title-center { 
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+.tabla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+}
+  
+.highlight-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+  
+.highlight-table th,
+.highlight-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+  
+.highlight-table th {
+    background-color: #f4f4f4;
+}
+  
+.highlight-table td {
+    transition: background-color 0.3s;
+}
+  
+/* Column highlighting */
+.highlight-table td:nth-child(1):hover {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+  
+.highlight-table td:nth-child(2):hover {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+  
+.highlight-table td:nth-child(3):hover {
+    background-color: rgba(0, 0, 255, 0.1);
+}
+  
+.highlight-table td:nth-child(4):hover {
+    background-color: rgba(255, 255, 0, 0.1);
+}
+  
