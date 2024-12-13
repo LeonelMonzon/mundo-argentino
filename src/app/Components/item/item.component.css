@@ -93,6 +93,9 @@ section.content {
   text-align: center;
   transition: transform 0.3s;
 }
+.imagen-card { 
+  width: 50%;
+}
 
 .card:hover {
   transform: scale(1.05);

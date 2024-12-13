@@ -16,14 +16,14 @@ export class LogComponent implements AfterViewInit {
   email: string = ""; 
 
   constructor(private apiUser: UserService,private dataService: DataService) {
-    this.loadData();
   }
 
-  loadData() {
-    this.apiUser.getUsers(this.email).subscribe({
+  loadData(mail: any) {
+    this.apiUser.getUsers(mail).subscribe({
       next: (response) => this.perfil = response.data,
       error: (err) => console.error(err),
     });
+    this.addNewDataLog(mail);
   }
 
   postUser(){
@@ -50,8 +50,7 @@ export class LogComponent implements AfterViewInit {
     } 
   }
 
-  addNewDataLog(){
-    const newDataLog = "gmail";
-    this.dataService.setSessionData(newDataLog);
+  addNewDataLog( email:any ){
+    this.dataService.setSessionData(email);
   }
 }

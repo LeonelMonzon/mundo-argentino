@@ -12,17 +12,17 @@ import { DataService } from '../../services/api/data.service';
 })
 export class HomeComponent {
   items: any[] = [
-    { name: 'Televisor LED 55"', image: '../../assets/televisor.jpg', price: 70000 },
-    { name: 'Refrigerador 350L', image: '../../assets/refrigerador.jpg', price: 85000 },
-    { name: 'Lavadora Automática', image: '../../assets/lavadora.jpg', price: 60000 },
-    { name: 'Microondas', image: '../../assets/microondas.jpg', price: 15000 },
-    { name: 'Aspiradora Robot', image: '../../assets/aspiradora.jpg', price: 25000 },
-    { name: 'Parlante Bluetooth', image: '../../assets/parlante.jpg', price: 10000 },
-    { name: 'Cafetera Espresso', image: '../../assets/cafetera.jpg', price: 20000 },
-    { name: 'Reloj Inteligente', image: '../../assets/reloj.jpg', price: 12000 },
-    { name: 'Lámpara LED', image: '../../assets/lampara.jpg', price: 3000 },
-    { name: 'Bicicleta de Montaña', image: '../../assets/bicicleta.jpg', price: 50000 }
-];
+    { name: 'Televisor LED 55"', image: '../../assets/televisor.jpg', price: 70000, description: 'Televisor LED de 55 pulgadas con alta resolución y colores vibrantes.' },
+    { name: 'Refrigerador 350L', image: '../../assets/refrigerador.jpg', price: 85000, description: 'Refrigerador de 350 litros con múltiples compartimientos y tecnología de enfriamiento rápido.' },
+    { name: 'Lavadora Automática', image: '../../assets/lavadora.jpg', price: 60000, description: 'Lavadora automática con capacidad de 8 kg y diferentes programas de lavado.' },
+    { name: 'Microondas', image: '../../assets/microondas.jpg', price: 15000, description: 'Microondas de 20 litros con varias funciones de cocción y descongelado.' },
+    { name: 'Aspiradora Robot', image: '../../assets/aspiradora.jpg', price: 25000, description: 'Aspiradora robot con sensor inteligente y autonomía de 90 minutos.' },
+    { name: 'Parlante Bluetooth', image: '../../assets/parlante.jpg', price: 10000, description: 'Parlante Bluetooth portátil con sonido estéreo y batería recargable.' },
+    { name: 'Cafetera Espresso', image: '../../assets/cafetera.jpg', price: 20000, description: 'Cafetera espresso con bomba de alta presión y espumador de leche integrado.' },
+    { name: 'Reloj Inteligente', image: '../../assets/reloj.jpg', price: 12000, description: 'Reloj inteligente con monitor de ritmo cardíaco y notificaciones de smartphone.' },
+    { name: 'Lámpara LED', image: '../../assets/lampara.jpg', price: 3000, description: 'Lámpara LED de escritorio con ajuste de brillo y bajo consumo de energía.' },
+    { name: 'Bicicleta de Montaña', image: '../../assets/bicicleta.jpg', price: 50000, description: 'Bicicleta de montaña robusta, ideal para terrenos difíciles y aventuras al aire libre.' }
+  ];
 
   groupedData: any[][] = [];
 
@@ -49,13 +49,11 @@ export class HomeComponent {
     return groups; 
   }
 
-  addNewProduct() {
-    const newProduct = { id: 1, name: 'Producto 1', price: 100 };
-    this.dataService.addProduct(newProduct);
+  addNewProduct(product: any) {
+    this.dataService.addProduct(product);
   }
 
-  addProducto() {
-    const newProduct = { id: 1, name: 'Producto 1', price: 100 };
-    this.dataService.addProduct(newProduct);
+  addProducto(product: any) {
+    this.dataService.setSelectedProduct(product);
   }
 }
